@@ -24,21 +24,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .nav {
   display: flex;
-  height: 70px;
+  padding: 16px;
+  flex-direction: column;
   background: rgba(0, 0, 0, 0.6);
-  align-items: center;
-  padding: 0 16px;
-  gap: 32px;
   backdrop-filter: blur(12px);
+  align-items: center;
 }
+
+.nav-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
 .logo {
   height: 40px;
 }
 
 .dropdown {
   position: relative;
+  display: inline-flex;
 }
 
 .dropdown-button {
@@ -53,17 +63,16 @@ body {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  display: none;
-  background: #0f0b12;
+  left: 0;
+  transform: translateY(10px);
+  background: rgba(24, 24, 27, 0.9);
   min-width: 220px;
-  padding: 8px 0;
-  border-radius: 8px;
+  padding: 16px;
+  border-radius: 14px;
   opacity: 0;
-  transition: 0.2s ease;
-  margin-top: 10px;
   visibility: hidden;
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease;
 }
 
 .dropdown-menu a {
@@ -77,11 +86,12 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 
 .suron-AI {
@@ -90,12 +100,30 @@ body {
 }
 
 .demo-button {
-  margin-left: auto;
   background-color: #513ef8;
   color: white;
-  height: 35px;
-  width: 125px;
+  height: 40px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  padding: 5px;
+}
+
+@media (min-width: 785px) {
+  .nav {
+    height: 70px;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .nav-left {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .demo-button {
+    margin-left: auto;
+    width: 125px;
+  }
 }
