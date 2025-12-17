@@ -27,6 +27,11 @@ body {
 
 .nav {
   display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   padding: 16px;
   flex-direction: column;
   background: rgba(0, 0, 0, 0.6);
@@ -94,6 +99,10 @@ body {
   transform: translateY(0);
 }
 
+.dropdown-button:hover {
+  color: #513ef8;
+}
+
 .suron-AI {
   text-decoration: none;
   color: white;
@@ -126,4 +135,67 @@ body {
     margin-left: auto;
     width: 125px;
   }
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #0b0b0f;
+  padding-top: 20px;
+}
+.grid-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+}
+.hero-content h1 {
+  font-size: 84px;
+}
+
+.glow-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    650px circle at 50% 55%,
+    rgba(124, 92, 255, 0.35),
+    transparent 70%
+  );
+}
+.hero-content .card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #161616;
+  border-color: #2e2e2e;
+  padding: 10px 18px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  gap: 10px;
+}
+.hero-content .para {
+  padding: 50px 300px;
+  font-size: 24px;
+  color: #a1a1a1;
 }
