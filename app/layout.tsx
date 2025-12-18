@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavigationBar from "./components/NavigationBar";
 import Hero from "./components/Hero";
+import WhySuronex from "./components/WhySuronex";
 
 export const metadata: Metadata = {
   title: "SuroNEX",
@@ -13,6 +14,7 @@ export default function RootLayout() {
       <body>
         <NavigationBar />
         <Hero />
+        <WhySuronex />
       </body>
     </html>
   );

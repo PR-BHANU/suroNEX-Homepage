@@ -27,6 +27,7 @@ export default function Hero() {
             </p>
           </div>
         </div>
+        <div className="hero-fade-bottom"></div>
       </section>
     </>
   );
