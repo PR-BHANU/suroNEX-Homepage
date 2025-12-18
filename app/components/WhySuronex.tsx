@@ -10,13 +10,19 @@ import { motion } from "framer-motion";
 export default function WhySuronex() {
   return (
     <>
-      <div className="why-container">
+      <motion.div
+        className="why-container"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 2, ease: "easeOut" }}
+      >
         <div className="why-content">
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 2, ease: "easeOut" }}
           >
             Why Suronex?
           </motion.h1>
@@ -24,7 +30,7 @@ export default function WhySuronex() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+            transition={{ duration: 2, ease: "easeOut", delay: 0.15 }}
           >
             Built for modern security teams who need speed, clarity, and
             confidence.
@@ -66,7 +72,7 @@ export default function WhySuronex() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

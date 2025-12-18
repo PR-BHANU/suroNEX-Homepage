@@ -2,7 +2,7 @@ export default function NavigationBar() {
   return (
     <nav className="nav">
       <div className="nav-left">
-        <img src="/suroNex-Text-Logo.svg" alt="Logo" className="logo" />
+        <img src="/suronex.svg" alt="Logo" className="logo" />
 
         <div className="dropdown">
           <button className="dropdown-button">Products</button>

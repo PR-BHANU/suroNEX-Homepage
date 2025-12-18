@@ -14,12 +14,18 @@ export default function RiskPoints() {
     <>
       <div className="risk-container pt-30">
         <div className="risk-glow"></div>
-        <div className="risk-content">
+        <motion.div
+          className="risk-content"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 2, ease: "easeOut" }}
+        >
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 2, ease: "easeOut" }}
           >
             The Cost of Not Having a<br></br> Risk & Compliance Tool
           </motion.h1>
@@ -27,7 +33,7 @@ export default function RiskPoints() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+            transition={{ duration: 2, ease: "easeOut", delay: 0.15 }}
           >
             Without the right platform, organizations face mounting challenges
             that impact security, productivity, and bottom-line costs.
@@ -95,7 +101,7 @@ export default function RiskPoints() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

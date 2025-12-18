@@ -1,9 +1,17 @@
+"use client";
+import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
     <>
-      <section className="hero">
+      <motion.section
+        className="hero"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 2, ease: "easeOut" }}
+      >
         <div className="grid-layer"></div>
         <div className="glow-layer"></div>
         <div className="hero-content">
@@ -28,7 +36,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-fade-bottom"></div>
-      </section>
+      </motion.section>
     </>
   );
 }

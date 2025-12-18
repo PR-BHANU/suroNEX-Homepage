@@ -6,6 +6,8 @@ import WhySuronex from "./components/WhySuronex";
 import ComplianceCoverage from "./components/ComplianceCoverage";
 import RiskPoints from "./components/RiskPoints";
 import Solution from "./components/Solution";
+import Integrations from "./components/Integrations";
+import Ready from "./components/Ready";
 
 export const metadata: Metadata = {
   title: "SuroNEX",
@@ -21,6 +23,8 @@ export default function RootLayout() {
         <ComplianceCoverage />
         <RiskPoints />
         <Solution />
+        <Integrations />
+        <Ready />
       </body>
     </html>
   );

@@ -13,12 +13,18 @@ import {
 export default function Solution() {
   return (
     <>
-      <div className="solution-container">
+      <motion.div
+        className="solution-container"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 2, ease: "easeOut" }}
+      >
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 2, ease: "easeOut" }}
         >
           How Suronex Solves This
         </motion.h1>
@@ -26,7 +32,7 @@ export default function Solution() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+          transition={{ duration: 2, ease: "easeOut", delay: 0.15 }}
         >
           Transform your compliance and security operations with intelligent
           automation and comprehensive visibility across your entire
@@ -154,7 +160,7 @@ export default function Solution() {
             </ul>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
