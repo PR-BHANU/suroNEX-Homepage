@@ -77,7 +77,7 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 200ms ease, transform 200ms ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .dropdown-menu a {
@@ -265,8 +265,8 @@ body {
   padding: 32px;
   backdrop-filter: blur(10px);
 
-  transition: transform 600ms ease, box-shadow 600ms ease,
-    border-color 600ms ease, background 600ms ease;
+  transition: transform 1s ease, box-shadow 1s ease, border-color 1s ease,
+    background 1s ease;
 }
 .why-card h3 {
   font-size: 30px;
@@ -403,13 +403,6 @@ body {
   overflow: hidden;
 }
 
-.cost-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 .risk-container h1 {
   font-size: 64px;
   text-align: center;
@@ -438,13 +431,6 @@ body {
     transparent 70%
   );
 }
-
-.risk-cards {
-  position: relative;
-  padding: 160px 0;
-  overflow: hidden;
-}
-
 .risk-card-glow {
   position: absolute;
   inset: 0;
@@ -460,12 +446,14 @@ body {
 
 .risk-grid {
   position: relative;
+  flex-direction: column;
+  display: flex;
   z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
+  height: 100%;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 220px;
   gap: 24px;
 }
 
@@ -527,4 +515,94 @@ body {
     transparent 70%
   );
   pointer-events: none;
+}
+
+.solution-container {
+  display: block;
+  position: relative;
+  background: #0b0b0f;
+  justify-items: center;
+  align-content: center;
+  padding: 160px 0;
+  overflow: hidden;
+}
+
+.solution-container h1 {
+  font-size: 64px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px 24px;
+  line-height: 1.6;
+}
+
+.solution-container a {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: #a1a1a1;
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.solution-grid {
+  padding-top: 60px;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.solution-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+  backdrop-filter: blur(12px);
+  transition: transform 1s ease, box-shadow 1s ease;
+}
+
+.solution-automate:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px #fc8a00;
+}
+
+.solution-blind:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px #0095f6;
+}
+
+.solution-security:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px #c54be4;
+}
+
+.solution-risk:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px #00c75c;
+}
+
+.solution-reactive:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px #d16f23;
+}
+
+.solution-scale:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px #00c7bc;
+}
+.solution-card h3 {
+  font-size: 24px;
 }
