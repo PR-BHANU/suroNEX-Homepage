@@ -4,6 +4,7 @@ import NavigationBar from "./components/NavigationBar";
 import Hero from "./components/Hero";
 import WhySuronex from "./components/WhySuronex";
 import ComplianceCoverage from "./components/ComplianceCoverage";
+import RiskPoints from "./components/RiskPoints";
 
 export const metadata: Metadata = {
   title: "SuroNEX",
@@ -17,6 +18,7 @@ export default function RootLayout() {
         <Hero />
         <WhySuronex />
         <ComplianceCoverage />
+        <RiskPoints />
       </body>
     </html>
   );
