@@ -20,7 +20,7 @@ export default function WhySuronex() {
           >
             Why Suronex?
           </motion.h1>
-          <motion.a
+          <motion.p
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -28,7 +28,7 @@ export default function WhySuronex() {
           >
             Built for modern security teams who need speed, clarity, and
             confidence.
-          </motion.a>
+          </motion.p>
           <div className="why-cards">
             <div className="why-card">
               <LayoutGrid color="grey" size={34} />

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliance Coverage</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+          sans-serif;
+      }
+
+      body {
+        background: #0b0b0f;
+        color: #ededed;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .section {
+        width: 100%;
+        padding: 120px 24px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .card {
+        max-width: 900px;
+        width: 100%;
+        padding: 64px;
+        border-radius: 28px;
+        background: radial-gradient(
+            800px circle at 50% 20%,
+            rgba(124, 92, 255, 0.35),
+            transparent 70%
+          ),
+          rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        text-align: center;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 30px 80px rgba(124, 92, 255, 0.25);
+      }
+
+      .number {
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 1;
+        background: linear-gradient(135deg, #9b8cff, #6f7cff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+      }
+
+      .title {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 24px;
+        color: #ffffff;
+      }
+
+      .description {
+        max-width: 640px;
+        margin: 0 auto 40px;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #a1a1a1;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 26px;
+        border-radius: 14px;
+        background: #ffffff;
+        color: #0b0b0f;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
+      }
+
+      @media (max-width: 768px) {
+        .card {
+          padding: 48px 28px;
+        }
+
+        .number {
+          font-size: 72px;
+        }
+
+        .title {
+          font-size: 26px;
+        }
+
+        .description {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="card">
+        <div class="number">40+</div>
+        <div class="title">Security Standards</div>
+        <p class="description">
+          Pre-built compliance frameworks continuously updated across cloud,
+          SaaS, and enterprise environments.
+        </p>
+        <a href="#" class="cta"> See Full Framework List → </a>
+      </div>
+    </section>
+  </body>
+</html>
