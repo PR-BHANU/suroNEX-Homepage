@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import NavigationBar from "./components/NavigationBar";
 import Hero from "./components/Hero";
@@ -25,6 +26,7 @@ export default function RootLayout() {
         <Solution />
         <Integrations />
         <Ready />
+        <Analytics />
       </body>
     </html>
   );
